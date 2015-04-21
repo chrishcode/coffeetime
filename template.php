@@ -47,7 +47,21 @@ $content = <<<END
 END;
 //footer
 $footer = <<<END
-	<div id="footer" class="footer"></div>
+	<div id="footer" class="footer">
+		<div class="container-fluid col-md-10 col-centered">
+			<ul class="row col-md-5 col-centered">
+				<li><a href="#">Om oss</a></li>
+				<li><a href="#">Kontakt</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Villkor</a></li>
+			</ul>
+			<div id="paypal" class="row col-md-2 pull-right">
+				<p>Betala säkert med</p>
+				<img src="img/paypalen.png" alt="paypal">
+			</div>
+			<p class="row col-md-2 col-centered">&copy coffeetime.se</p>
+		</div>
+	</div>
 END;
 
 

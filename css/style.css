@@ -104,10 +104,54 @@ body {
 	height: 130px;
 	height: 250px;
 	background-color: #1E3140;
+	color: #DDCDB3;
 }
 
 /*sticky footer bootstrap*/
 .footer {
 	bottom: 0;
 	position: relative;
+}
+
+/*stylar footer navigationen*/
+#footer ul {
+	margin-top: 115px;
+}
+
+/*stylar footer navigationen*/
+#footer ul li {
+	float: left;
+	margin-right: 98px;
+	font-size: 15px;
+	list-style-type: none;
+}
+
+#footer ul li:last-child {
+	margin-right: 0;
+}
+
+#footer ul li a {
+	color: #DDCDB3;
+}
+
+#footer p {
+	text-align: center;
+	margin-top: 80px;
+}
+
+#paypal {
+	margin: 0;
+	padding: 0;
+	margin-top: -140px;
+}
+
+#paypal p {
+	font-size: 17px;
+}
+
+#footer img {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
 }
