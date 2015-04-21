@@ -1,5 +1,6 @@
 body {
 	background-color: #F9F9F9;
+	font-family: 'Dosis', sans-serif;
 }
 /*top navigationen (den blå)*/
 #topnav {
@@ -7,11 +8,82 @@ body {
 	height: 90px;
 	background-color: #1E3140;
 }
+
+#topnav img {
+	margin-top: -17px;
+	margin-right: 5px;
+	width: 50px;
+	height: auto;
+}
+
+#topnav p {
+	font-family: 'Vibur', cursive;
+	color: #ffffff;
+	font-size: 30px;
+	margin-top: 27px;
+}
+
+/*stylar top navigationen*/
+#topnav ul {
+	list-style-type: none;
+	float: right;
+	padding: 0;
+	margin: 0;
+	margin-top: 37px;
+}
+
+/*stylar länkarna i top navigationen*/
+#topnav a {
+	color: #DDCDB3;
+}
+
+/*stylar top navigationen*/
+#topnav ul li {
+	font-weight: 600;
+	float: left;
+	margin-right: 58px;
+	font-size: 15px;
+}
+
+#topnav ul li:last-child {
+	margin-right: 0;
+}
+
 /*kategori navigationen*/
 #bottomnav {
 	width: 100%;
 	height: 35px;
 	background-color: #DDCDB3;
+}
+
+/*stylar kategorinavigationen*/
+#bottomnav ul {
+	margin-top: 8px;
+}
+
+/*stylar länkarna i kategorinavigationen*/
+#bottomnav a {
+	color: #000000;
+}
+
+/*class som centrerar containers*/
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+/*stylar kategorinavigationen*/
+#bottomnav ul li {
+	list-style: none;
+	float: left;
+	margin-right: 129px;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+/*tar bort margin right på sista i bottomnaven*/
+#bottomnav ul li:last-child {
+	margin-right: 0;
 }
 
 /*bild eller slider*/
