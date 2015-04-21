@@ -14,6 +14,7 @@
 $header = <<<END
 	<div id="topnav"></div>
 	<div id="bottomnav"></div>
+	<p>Erik</p>
 END;
 //element där slider eller bild ligger
 $img = <<<END
