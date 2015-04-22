@@ -39,7 +39,7 @@ $content = <<<END
 
 					<br><h4 class="col-md-7 col-centered"> Personuppgifter </h4>
 			<p class="col-md-7 col-centered">Vi följer Personuppgiftslagen (PuL), det innebär att vi är skyldiga att skydda dina personuppgifter och inte ge ut dem till tredjepart.</p>
-		</p>
+		</p> <br> <br>
 	</div>
 END;
 
