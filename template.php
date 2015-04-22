@@ -16,7 +16,7 @@
 $header = <<<END
 	<div id="topnav">
 		<div class="container-fluid col-md-10 col-centered">
-			<p class="pull-left"><img src="img/logo.svg" alt="logo">CoffeeTime</p>
+			<a href="index.php"><p class="pull-left"><img src="img/logo.svg" alt="logo">CoffeeTime</p></a>
 			<ul class="row col-md-4 pull-right">
 				<li><a href="#">OM OSS</a></li>
 				<li><a href="#">KONTAKT</a></li>
