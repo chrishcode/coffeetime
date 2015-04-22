@@ -11,7 +11,6 @@ $img = <<<END
 	<h1>Om oss</h1>
 	</div>
 	<img src="img/omoss.jpg" alt="omossbild">
-	
 	</div>
 END;
 
