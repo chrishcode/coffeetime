@@ -125,11 +125,7 @@ body {
 /*stylar footer navigationen*/
 #footer ul li {
 	float: left;
-<<<<<<< HEAD
-	margin-right: 145px;
-=======
 	margin-right: 114px;
->>>>>>> origin/master
 	font-size: 15px;
 	list-style-type: none;
 }
