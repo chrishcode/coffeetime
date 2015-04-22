@@ -18,24 +18,31 @@ END;
 //content
 $content = <<<END
 	<div id="content" class="container">
-		<p class="col-md-7 col-centered">
-				Q-Hur långt tid tar det innan jag får mina varor? <br>
-				A-Vi försöker alltid levera dina varor inom 2-5 arbetsdagar.</p>
+
+				<h4 class="col-md-7 col-centered">Q-Hur långt tid tar det innan jag får mina varor?</h4>
+			<p class="col-md-7 col-centered">	
+				A-Vi försöker alltid levera dina varor inom 2-5 arbetsdagar.</p> <br>
+
+				<h4 class="col-md-7 col-centered">Q-Kan jag ångra mitt köp?</h4> 
+			<p class="col-md-7 col-centered">	
+				A-Ja, du har alltid 14 dagars ångerrätt.</p> <br>
+
+				<h4 class="col-md-7 col-centered">Q-Hur vet jag om min order har skickats?</h4>
 			<p class="col-md-7 col-centered">
-				Q-Kan jag ångra mitt köp? <br>
-				A-Ja, du har alltid 14 dagars ångerrätt.</p>
+				A-Du får alltid ett mail när vi har skickat din produkt.</p> <br>
+
+				<h4 class="col-md-7 col-centered">Q-Min produkt krånglar eller fungerar inte, vad ska jag göra?</h4>
 			<p class="col-md-7 col-centered">
-				Q-Hur vet jag om min order har skickats? <br>
-				A-Du får alltid ett mail när vi har skickat din produkt.</p>
-			<p class="col-md-7 col-centered">
-				Q-Min produkt krånglar eller fungerar inte, vad ska jag göra? <br>
 				A-Om din produkt krånglar eller inte fungerar så har du rätt till att få en ny produkt eller pengar tillbaka. Skicka tillbaka produkten till oss med hjälp av retursedeln du fick med ditt packet.</p>
+				<br>
+
+			<h4 class="col-md-7 col-centered">Q-Kan jag spåra mitt paket?</h4>
 			<p class="col-md-7 col-centered">
-				Q-Kan jag spåra mitt paket? <br>
-				A-Nej, just nu så erbjuder vi inget sätt att spåra ditt paket men det är en funktion som vi planerar att införa.</p>
+				A-Nej, just nu så erbjuder vi inget sätt att spåra ditt paket men det är en funktion som vi planerar att införa.</p> <br>
+
+			<h4 class="col-md-7 col-centered">Q-Vilka betalsätt erbjuder ni?</h4>
 			<p class="col-md-7 col-centered">
-				Q-Vilka betalsätt erbjuder ni? <br>
-				A-Just nu så erbjuder vi betalning via Paypal, men fler betalningsalternativ kommer bli tillgängliga i framtiden.</p>		
+				A-Just nu så erbjuder vi betalning via Paypal, men fler betalningsalternativ kommer bli tillgängliga i framtiden.</p> <br> <br>
 		</p>
 	</div>
 END;
