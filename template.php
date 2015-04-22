@@ -14,7 +14,7 @@
 <?php
 //headern
 $header = <<<END
-	<div id="topnav">
+	<div id="topnav"> 
 		<div class="container-fluid col-md-10 col-centered">
 			<a href="index.php"><p class="pull-left"><img src="img/logo.svg" alt="logo">CoffeeTime</p></a>
 			<ul class="row col-md-4 pull-right">
@@ -49,7 +49,7 @@ END;
 $footer = <<<END
 	<div id="footer" class="footer">
 		<div class="container-fluid col-md-10 col-centered">
-			<ul class="row col-md-5 col-centered">
+			<ul id="footermenu" class="row col-md-5 col-centered">
 				<li><a href="#">Om oss</a></li>
 				<li><a href="#">Kontakt</a></li>
 				<li><a href="#">FAQ</a></li>
