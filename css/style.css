@@ -120,7 +120,7 @@ body {
 
 /*stylar content sektionen*/
 #content {
-	height: 600px;
+	min-height: 600px;
 	padding-top: 80px;
 }
 
@@ -208,4 +208,27 @@ body {
 	background-color: #000000;
 	opacity: 0.4;
 	position: absolute;
+}
+
+/*stylar bootstrap formulär*/
+.form-control {
+	border-color: #E5E5E5;
+	height: 40px;
+	border-radius: 4px;
+}
+
+.btn-success {
+	background-color: #00CC7D;
+	border: none;
+	font-weight: 700;
+	width: 100px;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.btn-success:hover {
+	opacity: 0.8;
+	background-color: #00CC7D;
+	border: none;
+	font-weight: 700;
 }
