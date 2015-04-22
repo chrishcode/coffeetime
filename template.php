@@ -63,10 +63,4 @@ $footer = <<<END
 		</div>
 	</div>
 END;
-
-
-echo $header;
-echo $img;
-echo $content;
-echo $footer;
 ?>
