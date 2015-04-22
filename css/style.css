@@ -120,8 +120,8 @@ body {
 
 /*stylar content sektionen*/
 #content {
-	height: 600px;
 	padding-top: 80px;
+	min-height: 600px;
 }
 
 

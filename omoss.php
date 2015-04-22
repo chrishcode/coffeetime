@@ -1,6 +1,6 @@
 <?php
 
-//unkluderar template
+//inkluderar template
 include "template.php";
 
 //skapar en egen img
