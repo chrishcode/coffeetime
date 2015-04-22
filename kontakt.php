@@ -29,5 +29,5 @@ echo $header;
 echo $img;
 echo $content;
 echo $footer;
-
+ 
 ?>
