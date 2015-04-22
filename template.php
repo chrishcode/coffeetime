@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Vibur' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Dosis:400,700,600,500,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -18,8 +22,8 @@ $header = <<<END
 		<div class="container-fluid col-md-10 col-centered">
 			<a href="index.php"><p class="pull-left"><img src="img/logo.svg" alt="logo">CoffeeTime</p></a>
 			<ul class="row col-md-4 pull-right">
-				<li><a href="#">OM OSS</a></li>
-				<li><a href="#">KONTAKT</a></li>
+				<li><a href="omoss.php">OM OSS</a></li>
+				<li><a href="kontakt.php">KONTAKT</a></li>
 				<li><a href="#">LOGGA IN</a></li>
 				<li><a href="#">BLI MEDLEM</a></li>
 			</ul>

@@ -15,6 +15,15 @@ $img = <<<END
 	</div>
 END;
 
+//content
+$content = <<<END
+	<div id="content" class="container">
+		<p class="col-md-7 col-centered">
+			HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!HÄR SKA VA ETT FORMULÄR!!!
+		</p>
+	</div>
+END;
+
 //printar ut alla element
 echo $header;
 echo $img;
