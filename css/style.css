@@ -9,6 +9,7 @@ body {
 	background-color: #1E3140;
 }
 
+/*stylar logo bilden*/
 #topnav img {
 	margin-top: -17px;
 	margin-right: 5px;
@@ -16,6 +17,7 @@ body {
 	height: auto;
 }
 
+/*stylar logo texten*/
 #topnav p {
 	font-family: 'Vibur', cursive;
 	color: #ffffff;
@@ -45,6 +47,7 @@ body {
 	font-size: 15px;
 }
 
+/*tar bort margin på sista i top menyn*/
 #topnav ul li:last-child {
 	margin-right: 0;
 }
@@ -93,6 +96,7 @@ body {
 	height: 500px;
 }
 
+/*stylar content sektionen*/
 #content {
 	height: 600px;
 }
@@ -121,37 +125,52 @@ body {
 /*stylar footer navigationen*/
 #footer ul li {
 	float: left;
+<<<<<<< HEAD
 	margin-right: 145px;
+=======
+	margin-right: 114px;
+>>>>>>> origin/master
 	font-size: 15px;
 	list-style-type: none;
 }
 
+/*stylar footer navigationen*/
 #footer ul li:last-child {
 	margin-right: 0;
 }
 
+/*stylar footer navigationen*/
 #footer ul li a {
 	color: #DDCDB3;
 }
 
+/*stylar text i footer*/
 #footer p {
 	text-align: center;
 	margin-top: 80px;
 }
 
+/*paypal diven*/
 #paypal {
 	margin: 0;
 	padding: 0;
 	margin-top: -140px;
 }
 
+/*paypal text*/
 #paypal p {
 	font-size: 17px;
 }
 
+/*paypal bild*/
 #footer img {
 	width: 100%;
 	height: auto;
 	padding: 0;
 	margin: 0;
+}
+
+/*centrerar text i footer menyn*/
+#footermenu {
+	text-align: center;
 }
