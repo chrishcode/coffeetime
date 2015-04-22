@@ -6,12 +6,11 @@ include "template.php";
 //skapar en egen img
 $img = <<<END
 	<div id="screenimg">
-	<div id="overlay"></div>
-	<div class="row col-md-3 col-centered">
-	<h1>Kaffesugen?</h1>
-	</div>
-	<img src="img/omoss.jpg" alt="omossbild">
-	
+		<div id="overlay"></div>
+		<div class="row col-md-3 col-centered">
+			<h1>Kaffesugen?</h1>
+		</div>
+		<img src="img/coffee.jpg" alt="kontaktbild">
 	</div>
 END;
 
@@ -33,3 +32,4 @@ echo $content;
 echo $footer;
 
 ?>
+

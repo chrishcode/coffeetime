@@ -54,10 +54,10 @@ $footer = <<<END
 	<div id="footer" class="footer">
 		<div class="container-fluid col-md-10 col-centered">
 			<ul id="footermenu" class="row col-md-5 col-centered">
-				<li><a href="#">Om oss</a></li>
-				<li><a href="#">Kontakt</a></li>
-				<li><a href="#">FAQ</a></li>
-				<li><a href="#">Villkor</a></li>
+				<li><a href="omoss.php">Om oss</a></li>
+				<li><a href="kontakt.php">Kontakt</a></li>
+				<li><a href="faq.php">FAQ</a></li>
+				<li><a href="villkor.php">Villkor</a></li>
 			</ul>
 			<div id="paypal" class="row col-md-2 pull-right">
 				<p>Betala säkert med</p>
