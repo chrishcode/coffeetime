@@ -8,9 +8,9 @@ $img = <<<END
 	<div id="screenimg">
 	<div id="overlay"></div>
 	<div class="row col-md-2 col-centered">
-	<h1>Villkor</h1>
+	<h1 class="slideh1">Villkor</h1>
 	</div>
-	<img src="img/villkor.jpg" alt="omossbild">
+	<img class="screenimg" src="img/villkor.jpg" alt="omossbild">
 	
 	</div>
 END;

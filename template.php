@@ -10,9 +10,11 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
 </head>
 <body>
-
+	<script src="js/responsiveslides.min.js"></script>
+	<script src="js/slider.js"></script>
 </body>
 </html>
 <?php
@@ -21,11 +23,12 @@ $header = <<<END
 	<div id="topnav"> 
 		<div class="container-fluid col-md-10 col-centered">
 			<a href="index.php"><p class="pull-left"><img src="img/logo.svg" alt="logo">CoffeeTime</p></a>
-			<ul class="row col-md-4 pull-right">
+			<ul class="row col-md-5 pull-right">
 				<li><a href="omoss.php">OM OSS</a></li>
 				<li><a href="kontakt.php">KONTAKT</a></li>
-				<li><a href="#">LOGGA IN</a></li>
-				<li><a href="#">BLI MEDLEM</a></li>
+				<li><a href="login.php">LOGGA IN</a></li>
+				<li><a href="login.php">BLI MEDLEM</a></li>
+				<li><a href="kundvagn.php"><div class="btn btn-default"><div class="glyphicon glyphicon-shopping-cart"></div>2500kr</div></a></li>
 			</ul>
 		</div>
 	</div>

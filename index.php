@@ -7,10 +7,26 @@ include "template.php";
 $img = <<<END
 	<div id="screenimg">
 		<div id="overlay"></div>
-		<div class="row col-md-3 col-centered">
-			<h1>Kaffesugen?</h1>
-		</div>
-		<img src="img/coffee.jpg" alt="kontaktbild">
+		<ul class="rslides">
+			<li>
+				<img class="slideimg" src="img/coffee1.png" alt="">
+				<div class="carousel-caption">
+					<h1>Kaffesugen?</h1>
+				</div>
+			</li>
+			<li>
+				<img class="slideimg" src="img/coffee3.png" alt="">
+				<div class="carousel-caption">
+					<h1>Vi är din kaffebutik på nätet!</h1>
+				</div>
+			</li>
+			<li>
+				<img class="slideimg" src="img/coffee2.png" alt="">
+				<div class="carousel-caption">
+					<h1>Med stort utbud & bra priser</h1>
+				</div>
+			</li>
+		</ul>
 	</div>
 END;
 

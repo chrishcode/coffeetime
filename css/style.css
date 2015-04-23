@@ -43,7 +43,7 @@ body {
 #topnav ul li {
 	font-weight: 600;
 	float: left;
-	margin-right: 58px;
+	margin-right: 46px;
 	font-size: 15px;
 }
 
@@ -97,13 +97,8 @@ body {
 	overflow: hidden;
 }
 
-/*bild*/
-#screenimg img {
-	width: 100%;
-	margin-top: -550px;
-}
 
-#screenimg h1 {
+.slideh1 {
 	color: #ffffff;
 	font-size: 74px;
 	position: absolute;
@@ -112,11 +107,10 @@ body {
 }
 
 /*stylar helskärmsbilden*/
-#screenimg img {
+.screenimg {
 	width: 100%;
 	margin-top: -300px;
 } 
-
 
 /*stylar content sektionen*/
 #content {
@@ -139,6 +133,7 @@ body {
 	height: 250px;
 	background-color: #1E3140;
 	color: #DDCDB3;
+		margin-top: 50px;
 }
 
 /*sticky footer bootstrap*/
@@ -236,7 +231,88 @@ body {
 
 
 
+/*css för slider på index (responsive slide)*/
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+/*css för slider på index (responsive slide)*/
+.rslides li {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+/*css för slider på index (responsive slide)*/
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+
+/*css för slider på index (responsive slide)*/
+.rslides img {
+	display: block;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+/*css för slider på index (responsive slide)*/
+.rslides h1 {
+	font-size: 74px;
+	font-weight: 300;
+	color: #ffffff;
+	display: inline-block;
+	margin-bottom: 248px; 
+}
+
+/*stylar login och bli medlem formulär*/
+#loginform {
+	padding: 0;
+}
+
+#loginform h2 {
+	margin-bottom: 20px;
+}
+
+#signupform {
+	padding: 0;
+}
+
+#signupform h2 {
+	margin-bottom: 20px;
+}
+
+/*stylar kundagnknapp*/
+
+.btn-default {
+	background-color: rgba(255, 255, 255, 0.1);
+	border: none;
+	font-weight: 700;
+	width: 100px;
+	height: 40px;
+	color: #ffffff;
+	padding: 10px;
+	margin-top: -10px;
+}
+
+.btn-default:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #ffffff;
+}
 
 
+.glyphicon-shopping-cart {
+	margin-right: 5px;
+}
 
 
