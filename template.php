@@ -34,7 +34,7 @@ $header = <<<END
 	</div>
 	<div id="bottomnav">
 		<div class="container">
-			<ul class="row col-md-11 col-centered">
+			<ul class="row col-md-10 col-centered">
 				<li><a href="#">KAFFEKOKARE</a></li>
 				<li><a href="#">PRESSKANNOR</a></li>
 				<li><a href="#">KAPSELMASKIN</a></li>
