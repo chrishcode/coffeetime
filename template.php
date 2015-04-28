@@ -18,6 +18,22 @@
 </body>
 </html>
 <?php
+//databas connect
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$databasename = "coffeetime";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $databasename);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+//echo "Connected successfully";
+//databas connect - Slut
+
 //headern
 $header = <<<END
 	<div id="topnav"> 
@@ -35,11 +51,11 @@ $header = <<<END
 	<div id="bottomnav">
 		<div class="container">
 			<ul class="row col-md-10 col-centered">
-				<li><a href="#">KAFFEKOKARE</a></li>
-				<li><a href="#">PRESSKANNOR</a></li>
-				<li><a href="#">KAPSELMASKIN</a></li>
-				<li><a href="#">MOKABRYGGARE</a></li>
-				<li><a href="#">ESPRESSOMASKIN</a></li>
+				<li><a href="products.php?category=kaffekokare">KAFFEKOKARE</a></li>
+				<li><a href="products.php?category=presskannor">PRESSKANNOR</a></li>
+				<li><a href="products.php?category=kapselmaskin">KAPSELMASKIN</a></li>
+				<li><a href="products.php?category=mokabryggare">MOKABRYGGARE</a></li>
+				<li><a href="products.php?category=espressomaskin">ESPRESSOMASKIN</a></li>
 			</ul>
 		</div>
 	</div>
