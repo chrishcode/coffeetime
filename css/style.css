@@ -340,6 +340,11 @@ body {
 	margin-bottom: 50px;
 }
 
+/*wrap till produktitel*/
+.titlewrap {
+	height: 60px;
+}
+
 /*fixar knapptext*/
 .product a {
 	padding-top: 9px;
@@ -395,3 +400,80 @@ body {
 }
 
 /*STYLAR PRODUKTER ---- SLUT*/
+
+
+
+
+
+/*STYLAR PRODUKT DETAILS*/
+
+.detailproduct {
+	border: 1px solid #E5E5E5;
+	background-color: #F2F2F2;
+	padding: 10px;
+	border-radius: 3px; 
+	margin-top: -50px;
+	min-height: 200px;
+}
+
+/*croppar bild om den är för stor*/
+.detailcrop {
+	width: 47%;
+	height: 450px;
+	overflow: hidden;
+	background-color: #ffffff;
+	margin-right: 20px;
+}
+
+.detailinfo {
+	float: left;
+	width: 50%;
+}
+
+.detailtitle {
+	font-size: 25px;
+	width: 100%;
+}
+
+.detailstatus {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+.detailJa {
+	width: 10px;
+	height: 10px;
+	background-color: #00CC7D;
+	float: left;
+	margin-right: 5px;
+	margin-top: 4px;
+}
+
+.detailNej {
+	width: 10px;
+	height: 10px;
+	background-color: #E92334;
+	float: left;
+	margin-right: 5px;
+	margin-top: 4px;
+}
+
+
+#content p.detailprice {
+	color: #E92334;
+	font-size: 30px;
+	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.detaildesc {
+	margin-bottom: 20px;
+}
+
+
+.detailbtn {
+	width: 100%;
+	height: 50px;
+}
