@@ -1,7 +1,33 @@
 <?php
-
 //inkluderar template
 include "template.php";
+
+if(isset($_POST['Email'], $_POST['Losenord']))
+{
+	$query = <<<END
+	SELECT Email, Losenord, KundID FROM kund
+	WHERE Email = '{$_POST['Email']}'
+	AND Losenord = '{$_POST['Losenord']}'
+END;
+$res = $conn->query($query);
+	if($res->num_rows > 0)
+	{
+		$row = $res->fetch_object();
+		$_SESSION["Email"] = $row->Email;
+		$_SESSION["KundID"] = $row->KundID;
+		echo "<script>window.location.replace('index.php');</script>";
+	}
+}
+
+if(isset($_POST['Email'], $_POST['Losenord'], $_POST['Fnamn'], $_POST['Enamn'], $_POST['Telefon'], $_POST['Adress'], $_POST['Postnummer']))
+{
+$query = <<<END
+	INSERT INTO kund(Email,Losenord,Fnamn,Enamn,Telefon,Adress,Postnummer)
+	VALUES('{$_POST['Email']}','{$_POST['Losenord']}','{$_POST['Fnamn']}','{$_POST['Enamn']}','{$_POST['Telefon']}','{$_POST['Adress']}','{$_POST['Postnummer']}')
+END;
+$conn->query($query);
+echo "<script>window.location.replace('index.php');</script>";
+}
 
 $content = <<<END
 

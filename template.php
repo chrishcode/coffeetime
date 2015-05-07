@@ -1,3 +1,8 @@
+<?php
+//Session - cookie
+session_name('CoffeeTime');
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +23,8 @@
 </body>
 </html>
 <?php
+
+
 //databas connect
 $servername = "localhost";
 $username = "root";
@@ -33,18 +40,19 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully";
 //databas connect - Slut
-
 //headern
+if(isset($_SESSION['KundID']))
+{
 $header = <<<END
 	<div id="topnav"> 
 		<div class="container-fluid col-md-10 col-centered">
 			<a href="index.php"><p class="pull-left"><img src="img/logo.svg" alt="logo">CoffeeTime</p></a>
-			<ul class="row col-md-5 pull-right">
+			<ul class="row col-md-6 pull-right topnav-wrap">
 				<li><a href="omoss.php">OM OSS</a></li>
 				<li><a href="kontakt.php">KONTAKT</a></li>
-				<li><a href="login.php">LOGGA IN</a></li>
-				<li><a href="login.php">BLI MEDLEM</a></li>
-				<li><a href="kundvagn.php"><div class="btn btn-default"><div class="glyphicon glyphicon-shopping-cart"></div>2500kr</div></a></li>
+				<li><a href="logout.php">LOGGA UT</a></li>
+				<li><a href="profile.php">INLOGGAD SOM {$_SESSION['Email']}</a></li>
+				<li class="pull-right"><a href="kundvagn.php"><div class="btn btn-default"><div class="glyphicon glyphicon-shopping-cart"></div>2500kr</div></a></li>
 			</ul>
 		</div>
 	</div>
@@ -60,6 +68,35 @@ $header = <<<END
 		</div>
 	</div>
 END;
+}
+else
+{
+$header = <<<END
+	<div id="topnav"> 
+		<div class="container-fluid col-md-10 col-centered">
+			<a href="index.php"><p class="pull-left"><img src="img/logo.svg" alt="logo">CoffeeTime</p></a>
+			<ul class="row col-md-5 pull-right">
+				<li><a href="omoss.php">OM OSS</a></li>
+				<li><a href="kontakt.php">KONTAKT</a></li>
+				<li><a href="login.php">LOGGA IN</a></li>
+				<li><a href="login.php">BLI MEDLEM</a></li>
+				<li class="pull-right"><a href="kundvagn.php"><div class="btn btn-default"><div class="glyphicon glyphicon-shopping-cart"></div>2500kr</div></a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="bottomnav">
+		<div class="container">
+			<ul class="row col-md-10 col-centered">
+				<li><a href="products.php?category=kaffekokare">KAFFEKOKARE</a></li>
+				<li><a href="products.php?category=presskannor">PRESSKANNOR</a></li>
+				<li><a href="products.php?category=kapselmaskin">KAPSELMASKIN</a></li>
+				<li><a href="products.php?category=mokabryggare">MOKABRYGGARE</a></li>
+				<li><a href="products.php?category=espressomaskin">ESPRESSOMASKIN</a></li>
+			</ul>
+		</div>
+	</div>
+END;
+}
 //element där slider eller bild ligger
 $img = <<<END
 	<div id="screenimg"></div>
