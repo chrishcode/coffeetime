@@ -7,6 +7,33 @@ include "template.php";
 
 $products = ""; //tom variabel som tar emot databasinnehåll
 
+//kundvagn - lägg lägg till produkt
+
+if(isset($_GET['id'])) {
+	$id = $_GET['id'];
+	$res = $conn->query(" SELECT * FROM produkt WHERE ProduktID = '{$id}' ");
+	$row = $res->fetch_object();
+	$addProduct = array('id' => $row->ProduktID, 'img' => $row->imgUrl, 'price' => $row->Pris, 'productName' => $row->ProduktNamn, 'qty' => 1);
+
+
+	//Kolla om produkten finns i kundvagnen, isåfall lägg ett extra antal till(qty).
+	$exists = null;
+	foreach($_SESSION['kundvagn'] as $item => $cartItem) {
+		if($cartItem['id'] == $id) {
+			$exists = true;
+			$_SESSION['kundvagn'][$item]['qty']++;
+			break;
+		}
+	}
+
+	//Om produkten inte finns i kundvagnen så läggs den till
+	if($exists == null) {
+		array_push($_SESSION['kundvagn'], $addProduct);
+		echo "<script>window.location.replace('products.php?category={$_GET["category"]}');</script>";
+	}
+}
+
+
 //databasfråga hämtar alla produkter och sorterar på kategori(get-variablen)
 $query = <<<END
 	SELECT * FROM produkt
@@ -27,7 +54,7 @@ if($res->num_rows > 0) {
 				<h6>LAGERSTATUS<div class="{$row->Lagerstatus} img-circle"></div></h6>
 				<p class="price">{$row->Pris}kr</p>
 				<a class="btn btn-success pull-left" href="productdetails.php?id={$row->ProduktID}">LÄS MER</a>
-				<a class="btn btn-success pull-right" href="#">KÖP</a>
+				<a class="btn btn-success pull-right" href="products.php?category={$row->Kategori}&id={$row->ProduktID}">KÖP</a>
 			</div>
 END;
 	}

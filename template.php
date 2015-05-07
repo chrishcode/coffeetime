@@ -40,6 +40,15 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully";
 //databas connect - Slut
+
+//kundvagn
+if(!isset($_SESSION['kundvagn'])) {
+	$_SESSION['kundvagn'] = array();
+}
+
+//räkna antalet produkter i kundvagn
+$cartQty = count($_SESSION['kundvagn']);
+
 //headern
 if(isset($_SESSION['KundID']))
 {
@@ -52,7 +61,7 @@ $header = <<<END
 				<li><a href="kontakt.php">KONTAKT</a></li>
 				<li><a href="logout.php">LOGGA UT</a></li>
 				<li><a href="profile.php">INLOGGAD SOM {$_SESSION['Email']}</a></li>
-				<li class="pull-right"><a href="kundvagn.php"><div class="btn btn-default"><div class="glyphicon glyphicon-shopping-cart"></div>2500kr</div></a></li>
+				<li class="pull-right"><a href="cart.php"><div class="btn btn-default"><div class="glyphicon glyphicon-shopping-cart"></div>KUNDVAGN ($cartQty)</div></a></li>
 			</ul>
 		</div>
 	</div>
@@ -80,7 +89,7 @@ $header = <<<END
 				<li><a href="kontakt.php">KONTAKT</a></li>
 				<li><a href="login.php">LOGGA IN</a></li>
 				<li><a href="login.php">BLI MEDLEM</a></li>
-				<li class="pull-right"><a href="kundvagn.php"><div class="btn btn-default"><div class="glyphicon glyphicon-shopping-cart"></div>2500kr</div></a></li>
+				<li class="pull-right"><a href="cart.php"><div class="btn btn-default"><div class="glyphicon glyphicon-shopping-cart"></div>KUNDVAGN ($cartQty)</div></a></li>
 			</ul>
 		</div>
 	</div>

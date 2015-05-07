@@ -29,7 +29,7 @@ if($res->num_rows > 0) {
 					<p class="detaildesc">$productDesc</p>
 					<h6 class="detailstatus">LAGERSTATUS<div class="detail{$row->Lagerstatus} img-circle"></div></h6>
 					<p class="detailprice">{$row->Pris}kr</p>
-					<button class="btn btn-success detailbtn">KÖP</button>
+					<a class="btn btn-success detailbtn" href="products.php?category={$row->Kategori}&id={$row->ProduktID}">KÖP</a>
 				</div>
 			</div>
 END;
