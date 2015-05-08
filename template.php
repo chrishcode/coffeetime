@@ -60,7 +60,7 @@ $header = <<<END
 				<li><a href="omoss.php">OM OSS</a></li>
 				<li><a href="kontakt.php">KONTAKT</a></li>
 				<li><a href="logout.php">LOGGA UT</a></li>
-				<li><a href="profile.php">INLOGGAD SOM {$_SESSION['Email']}</a></li>
+				<li><a href="profil.php?KundID={$_SESSION['KundID']}">INLOGGAD SOM {$_SESSION['Email']}</a></li>
 				<li class="pull-right"><a href="cart.php"><div class="btn btn-default"><div class="glyphicon glyphicon-shopping-cart"></div>KUNDVAGN ($cartQty)</div></a></li>
 			</ul>
 		</div>

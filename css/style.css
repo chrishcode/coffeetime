@@ -500,13 +500,14 @@ body {
 }
 
 
-/*KUNDVAGN*/
+/*KUNDVAGN STYLING*/
 
 #cart {
 	width: 100%;
 	font-size: 17px;
 }
 
+/*tabbellen*/
 #cart th {
 	border-bottom: 1px solid #E5E5E5;
 	text-align: center;
@@ -523,7 +524,6 @@ body {
 	padding-top: 10px;
 }
 
-
 #cart tr:last-child {
 	border-bottom: 1px solid #E5E5E5;
 }
@@ -536,22 +536,45 @@ body {
 	text-align: left;
 }
 
+/*bild*/
 #cart img {
 	width: 150px;
 	height: auto;
 }
 
+/*pris*/
 #cart .price {
 	color: #E92334;
 }
 
-
+/*knappar*/
 .btn-cart {
 	width: 120px;
 	padding-top: 10px;
 	margin-left: 20px;
 }
 
+/*ta bort knapp*/
+.glyphicon-trash {
+	color: gray;
+}
+
+.glyphicon-trash:hover {
+	color: #E92334;
+	text-decoration: none;
+}
+
+/*KUNDVAGN STYLING END*/
 
 
+/*POFILE STYLING*/
+
+.btn-delete {
+	padding-top: 10px;
+	margin-left: 10px;
+}
+
+
+
+/*POFILE STYLING END*/
 

@@ -3,13 +3,15 @@
 //unkluderar template
 include "template.php";
 
-
+//loopar igenom kundvagn och printar ut den
 foreach($_SESSION['kundvagn'] as $item => $cartItem) {
 	$produktId = $cartItem['id'];
 	$produktNamn = $cartItem['productName'];
 	$antal = $cartItem['qty'];
-	$pris = $cartItem['price'];
+	$pris = $cartItem['price'] * $antal;
 	$img = $cartItem['img'];
+	$totalPrice += $pris; //totala summan
+
 
 	$cartId = $item;
 
@@ -19,11 +21,12 @@ foreach($_SESSION['kundvagn'] as $item => $cartItem) {
 			<td class="productname"><h4>$produktNamn<h4></td>
 			<td>$antal</td>
 			<td class="price">$pris kr</td>
-			<td><a href="cartdelete.php?id=$cartId">Ta Bort</a></td>
+			<td><a class="glyphicon glyphicon-trash" href="cartdelete.php?id=$cartId"></a></td>
 		</tr>
 END;
 }
 
+//kundvagnen
 $cart = <<<END
 		<table id="cart">
 			<tr>
@@ -31,9 +34,16 @@ $cart = <<<END
 				<th class="productname">PRODUKT</th>
 				<th>ANTAL</th>
 				<th>PRIS</th>
-				<th></th>
+				<th>TA BORT</th>
 			</tr>
 			$cartProducts
+			<tr>
+				<td></td>
+				<td></td>
+				<td>SUMMA</td>
+				<td class="price">$totalPrice kr</td>
+				<td></td>
+			</tr>
 		</table>
 END;
 
