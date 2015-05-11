@@ -53,7 +53,7 @@ $content = <<<END
 		<div id="products" class="col-md-10 col-centered">
 			<h1 class="col-md-4 col-centered">KUNDVAGN</h1>
 			$cart
-			<a class="btn btn-success pull-right btn-cart">TILL KASSAN</a>
+			<a class="btn btn-success pull-right btn-cart" href="checkout.php?KundID={$_SESSION['KundID']}">TILL KASSAN</a>
 			<a class="btn btn-danger pull-right btn-cart" href="cartdelete.php">TÖM KUNDVAGN</a>
 		</div>
 	</div>

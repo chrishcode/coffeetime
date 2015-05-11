@@ -9,6 +9,7 @@ body {
 	background-color: #1E3140;
 }
 
+
 /*stylar logo bilden*/
 #topnav img {
 	margin-top: -17px;
@@ -578,3 +579,47 @@ body {
 
 /*POFILE STYLING END*/
 
+
+
+/*KASSA STYLING*/
+
+
+.frakt {
+    width:15px;
+    float: left;
+}
+
+.frakt-label {
+    margin-top: 12px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+
+.kassa-paypal {
+    width: 150px;
+    height: auto;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    margin-top: -15px;
+}
+
+#betala {
+    margin-top: -160px;
+}
+
+#slutfor {
+    margin-top: -200px;
+}
+
+.btn-checkout {
+    padding-top: 15px;
+    width: 310px;
+    height: 50px;
+}
+
+span.price {
+    color: #E92334;
+}
+
+/*KASSA STYLING END*/
