@@ -1,5 +1,5 @@
-<?php
-
+<?php 
+include_once("config.php");
 //unkluderar template
 include "template.php";
 

@@ -1,11 +1,12 @@
 <?php
-
+include_once("config.php");
 //unkluderar template
 include "template.php";
 
 if(isset($_SESSION['KundID'])) {
         //loopar igenom kundvagn och printar ut den
     foreach($_SESSION['kundvagn'] as $item => $cartItem) {
+        
         $produktId = $cartItem['id'];
         $produktNamn = $cartItem['productName'];
         $antal = $cartItem['qty'];
@@ -132,12 +133,38 @@ END;
 END;
     
     //visar betalnings knapp och summa
-    $content .= <<<END
+    $slutforbetalning = <<<END
             <div class="col-md-3 col-centered" id="slutfor">
                 <h3>Total summa att betala: <span class="price">$totalPrice kr</span></h3>
-                <a href="paypalkundvagn" class="btn btn-success btn-checkout">SLUTFÖR KÖP</a>
-            </div>
+                <form method="post" action="process.php">
 END;
+    
+    foreach($_SESSION['kundvagn'] as $item => $cartItem) {
+        $results = $conn->query("SELECT ProduktID, ProduktNamn, Beskrivning, Pris FROM produkt WHERE ProduktID='{$cartItem['id']}' LIMIT 1");
+        $row = $results->fetch_object();
+        
+        $paypalProduktID = $row->ProduktID;
+        $paypalProduktNamn = $row->ProduktNamn;
+        $paypalBeskrivning = $row->Pris;
+        
+        $slutforbetalning .= <<<END
+            <input type="hidden" name="item_name[$item]" value="$paypalProduktNamn" />
+            <input type="hidden" name="item_code[$item]" value="$paypalProduktID" />
+            <input type="hidden" name="item_price[$item]" value="$paypalBeskrivning" />
+            <input type="hidden" name="item_qty[$item]" value="$antal" />
+END;
+    }
+    
+    $slutforbetalning .= <<<END
+                <input type="submit" class="btn btn-success btn-checkout" value="SLUTFÖR KÖP">
+            </form>
+        </div>
+END;
+    
+    $content .= <<<END
+        $slutforbetalning
+END;
+    
 
 }
 
