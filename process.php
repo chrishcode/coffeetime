@@ -27,23 +27,11 @@ if($_POST) //Post Data received from product list page.
     foreach($_POST['item_name'] as $key=>$itmname)
     {
         $product_code 	= filter_var($_POST['item_code'][$key], FILTER_SANITIZE_STRING); 
-		
-        foreach($_SESSION['kundvagn'] as $item => $cartItem) {
-
-            $produktId = $cartItem['id'];
-            $produktNamn = $cartItem['productName'];
-            $antal = $cartItem['qty'];
-            $pris = $cartItem['price'] * $antal;
-            $img = $cartItem['img'];
-            //$totalPrice += $pris; //totala summan
-
-
-            $cartId = $item;
-
-            $results = $conn->query("SELECT ProduktID, ProduktNamn, Beskrivning, Pris FROM produkt WHERE ProduktID='{$cartItem['id']}' LIMIT 1");
-            $row = $results->fetch_object();
-        }
-		
+    
+        $results = $conn->query("SELECT ProduktID, ProduktNamn, Beskrivning, Pris FROM produkt WHERE ProduktID='{$product_code}' LIMIT 1");
+        $row = $results->fetch_object();
+            
+        
         $paypal_data .= '&L_PAYMENTREQUEST_0_NAME'.$key.'='.urlencode($row->ProduktNamn);
         $paypal_data .= '&L_PAYMENTREQUEST_0_NUMBER'.$key.'='.urlencode($_POST['item_code'][$key]);
         $paypal_data .= '&L_PAYMENTREQUEST_0_AMT'.$key.'='.urlencode($row->Pris);		

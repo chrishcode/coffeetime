@@ -145,13 +145,13 @@ END;
         
         $paypalProduktID = $row->ProduktID;
         $paypalProduktNamn = $row->ProduktNamn;
-        $paypalBeskrivning = $row->Pris;
+        $paypalBeskrivning = $row->Beskrivning;
         
         $slutforbetalning .= <<<END
             <input type="hidden" name="item_name[$item]" value="$paypalProduktNamn" />
             <input type="hidden" name="item_code[$item]" value="$paypalProduktID" />
-            <input type="hidden" name="item_price[$item]" value="$paypalBeskrivning" />
-            <input type="hidden" name="item_qty[$item]" value="$antal" />
+            <input type="hidden" name="item_desc[$item]" value="$paypalBeskrivning" />
+            <input type="hidden" name="item_qty[$item]" value="{$cartItem['qty']}" />
 END;
     }
     
