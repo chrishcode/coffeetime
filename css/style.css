@@ -633,3 +633,18 @@ span.price {
 }
 
 /*TACK SIDA STYLING END*/
+
+
+/*orderhistorik namn*/
+
+#orderhistorik h3 {
+    margin-bottom: 50px;
+}
+
+#cart tr td.namn-historik {
+    text-align: left;
+}
+
+.cart-historik {
+    margin-bottom: 50px;
+}
