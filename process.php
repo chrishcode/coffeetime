@@ -214,6 +214,34 @@ if(isset($_GET["token"]) && isset($_GET["PayerID"]))
 					}
 					
 					*/
+                    
+                    
+                    //sql fråga för att sätta in order i databasen
+                    
+                    $conn = new mysqli('localhost','root','root','coffeetime');
+                    
+                    $ordersql = <<<END
+                        INSERT INTO orders(KundID)
+                        VALUES("{$_SESSION['KundID']}")
+                        
+END;
+                    $conn->query($ordersql);
+                    
+                    
+                    
+                    foreach($_SESSION['kundvagn'] as $item => $cartItem) {
+                        $pris = $cartItem['price'] * $cartItem['qty'];
+                        $order_rowsql = <<<END
+                        
+                        INSERT INTO orderdetaljer(OrderID, ProduktID, Antal, Pris)
+                        VALUES(LAST_INSERT_ID(), '{$cartItem['id']}', '{$cartItem['qty']}', '$pris');
+END;
+                        $conn->query($order_rowsql);
+                    }
+                    
+                    
+                    unset($_SESSION['kundvagn']); //tömmer kundvagnen efter köp         
+                    echo "<script>window.location.replace('tack.php');</script>"; // skickar användare till tack sida
 					
 					echo '<pre>';
 					print_r($httpParsedResponseAr);
