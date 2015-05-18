@@ -9,21 +9,21 @@ $img = <<<END
 		<div id="overlay"></div>
 		<ul class="rslides">
 			<li>
-				<img class="slideimg" src="img/coffee1.png" alt="">
+				<img class="slideimg" src="img/coffee1.jpg" alt="">
 				<div class="carousel-caption">
-					<h1>Kaffesugen?</h1>
+					<h1></h1>
 				</div>
 			</li>
 			<li>
-				<img class="slideimg" src="img/coffee3.png" alt="">
+				<img class="slideimg" src="img/coffee3.jpg" alt="">
 				<div class="carousel-caption">
-					<h1>Vi är din kaffebutik på nätet!</h1>
+					<h1></h1>
 				</div>
 			</li>
 			<li>
-				<img class="slideimg" src="img/coffee2.png" alt="">
+				<img class="slideimg" src="img/coffee2.jpg" alt="">
 				<div class="carousel-caption">
-					<h1>Med stort utbud & bra priser</h1>
+					<h1></h1>
 				</div>
 			</li>
 		</ul>

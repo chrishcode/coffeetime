@@ -135,7 +135,7 @@ END;
     //visar betalnings knapp och summa
     $slutforbetalning = <<<END
             <div class="col-md-3 col-centered" id="slutfor">
-                <h3>Total summa att betala: <span class="price">$totalPrice kr</span></h3>
+                <h3>Total summa att betala: <span class="checkout-price">$totalPrice kr</span></h3>
                 <form method="post" action="process.php">
 END;
     

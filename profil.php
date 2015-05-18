@@ -86,7 +86,7 @@ END;
                     <tr> 
                         <td class="namn-historik">{$row->ProduktNamn}</td>
                         <td>{$row->Antal}</td>
-                        <td>{$row->Pris} kr</td>
+                        <td class="pris-historik">{$row->Pris} kr</td>
                     </tr>
 END;
                 }}

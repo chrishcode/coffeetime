@@ -19,7 +19,7 @@ foreach($_SESSION['kundvagn'] as $item => $cartItem) {
 		<tr>
 			<td><img src="$img" alt="produktbild"></td>
 			<td class="productname"><h4>$produktNamn<h4></td>
-			<td>$antal</td>
+			<td class="antal">$antal</td>
 			<td class="price">$pris kr</td>
 			<td><a class="glyphicon glyphicon-trash" href="cartdelete.php?id=$cartId"></a></td>
 		</tr>
@@ -34,7 +34,7 @@ $cart = <<<END
 				<th class="productname">PRODUKT</th>
 				<th>ANTAL</th>
 				<th>PRIS</th>
-				<th>TA BORT</th>
+				<th class="tabort">TA BORT</th>
 			</tr>
 			$cartProducts
 			<tr>

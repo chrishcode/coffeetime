@@ -56,6 +56,7 @@ $header = <<<END
 	<div id="topnav"> 
 		<div class="container-fluid col-md-10 col-centered">
 			<a href="index.php"><p class="pull-left"><img src="img/logo.svg" alt="logo">CoffeeTime</p></a>
+            
 			<ul class="row col-md-6 pull-right topnav-wrap">
 				<li><a href="omoss.php">OM OSS</a></li>
 				<li><a href="kontakt.php">KONTAKT</a></li>
@@ -128,7 +129,7 @@ $footer = <<<END
 				<p>Betala säkert med</p>
 				<img src="img/paypalen.png" alt="paypal">
 			</div>
-			<p class="row col-md-2 col-centered">&copy coffeetime.se</p>
+			<p class="copy row col-md-2 col-centered">&copy coffeetime.se</p>
 		</div>
 	</div>
 END;
