@@ -8,7 +8,6 @@ $img = <<<END
 	<div id="screenimg">
 	<div id="overlay"></div>
 	<div class="row col-md-1 col-centered">
-	<h1 class="slideh1"></h1>
 	</div>
 	<img class="screenimg" src="img/faq2.jpg" alt="FAQ">
 	
@@ -43,7 +42,7 @@ $content = <<<END
 			<h4 class="col-md-7 col-centered">Q-Vilka betalsätt erbjuder ni?</h4>
 			<p class="col-md-7 col-centered">
 				A-Just nu så erbjuder vi betalning via Paypal, men fler betalningsalternativ kommer bli tillgängliga i framtiden.</p> <br> <br>
-		</p>
+
 	</div>
 END;
 

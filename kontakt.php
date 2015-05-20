@@ -8,7 +8,6 @@ $img = <<<END
 	<div id="screenimg">
 	<div id="overlay"></div>
 	<div class="row col-md-2 col-centered">
-	<h1 class="slideh1"></h1>
 	</div>
 	<img class="screenimg" src="img/contact2.jpg" alt="kontaktbild">
 	

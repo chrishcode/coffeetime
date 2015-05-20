@@ -45,7 +45,7 @@
 }
 
 @media(max-width:1200px) {
-    #cart td .price {
+    .cart td .price {
         width: 100px;
     }
     
@@ -187,6 +187,30 @@ body {
 /*stylar content sektionen*/
 #content {
 	min-height: 400px;
+	padding-top: 80px;
+	font-size: 13px;
+}
+
+#contentorderhistorik {
+	min-height: 400px;
+	padding-top: 80px;
+	font-size: 13px;
+}
+
+#contentcheckout {
+    	min-height: 400px;
+	padding-top: 80px;
+	font-size: 13px;
+}
+
+#betalsatt {
+    	min-height: 400px;
+	padding-top: 80px;
+	font-size: 13px;
+}
+
+#fraktsatt {
+    	min-height: 400px;
 	padding-top: 80px;
 	font-size: 13px;
 }
@@ -476,7 +500,7 @@ body {
 	background-color: #00CC7D;
 	float: left;
 	margin-right: 5px;
-	margin-top: 2px;
+	margin-top: 12px;
 }
 
 .Nej {
@@ -485,7 +509,7 @@ body {
 	background-color: #E92334;
 	float: left;
 	margin-right: 5px;
-	margin-top: 2px;
+	margin-top: 12px;
 }
 
 /*STYLAR PRODUKTER ---- SLUT*/
@@ -571,13 +595,13 @@ body {
 
 /*KUNDVAGN STYLING*/
 
-#cart {
+.cart {
 	width: 100%;
 	font-size: 17px;
 }
 
 /*tabbellen*/
-#cart th {
+.cart th {
 	border-bottom: 1px solid #E5E5E5;
 	text-align: center;
 	font-size: 14px;
@@ -585,7 +609,7 @@ body {
 	padding-left: 10px;
 }
 
-#cart tr td {
+.cart tr td {
 	/*border: 1px solid #000000;*/
 	text-align: center;
 	padding-right: 10px;
@@ -593,26 +617,26 @@ body {
 	padding-top: 10px;
 }
 
-#cart tr:last-child {
+.cart tr:last-child {
 	border-bottom: 1px solid #E5E5E5;
 }
 
-#cart th.productname {
+.cart th.productname {
 	text-align: left;
 }
 
-#cart td.productname {
+.cart td.productname {
 	text-align: left;
 }
 
 /*bild*/
-#cart img {
+.cart img {
 	width: 150px;
 	height: auto;
 }
 
 /*pris*/
-#cart .price {
+.cart .price {
 	color: #E92334;
 }
 
@@ -673,8 +697,9 @@ body {
 }
 
 #betala {
-    margin-top: -160px;
+    margin-top: -60px;
 }
+
 
 #slutfor {
     margin-top: -200px;
@@ -721,7 +746,7 @@ span.price {
     margin-bottom: 50px;
 }
 
-#cart tr td.namn-historik {
+.cart tr td.namn-historik {
     text-align: left;
 }
 
@@ -750,6 +775,7 @@ span.price {
     margin-bottom: 0;
 }
 
+/*stor skärm*/
 @media(max-width:1200px) {
     .price {
         width: 150px;
@@ -760,6 +786,7 @@ span.price {
     }
 }
 
+/*medium skärm*/
 @media(max-width:995px) {
     .product {    
         height: 465px;   
@@ -775,9 +802,9 @@ span.price {
     }
 }
 
-
+/*medium skärm*/
 @media(max-width:767px) {
-    #cart img {
+    .cart img {
 	width: 90px;
 	height: auto;
 }
@@ -796,7 +823,7 @@ span.price {
 
 
 }
-
+/*mindre skärm*/
 @media(max-width:650px) {
     .productname h4 {
         font-size: 15px;
@@ -806,11 +833,11 @@ span.price {
         width: 200px;
     }
     
-    #cart img {
+    .cart img {
         width: 60px;
     }
     
-    #cart th {
+    .cart th {
         font-size: 10px;
     }
     
@@ -838,7 +865,7 @@ span.price {
     }
 }
 
-
+/*läsplatta*/
 @media(max-width:500px) {
     .price {
         font-size: 13px;
@@ -853,7 +880,7 @@ span.price {
         font-size: 13px;
     }
     
-    #cart img {
+    .cart img {
         width: 40px;
     }
 
@@ -861,7 +888,7 @@ span.price {
         height: 1050px;
     }
 }
-
+/*mobil*/
 @media(max-width:399px) {
     .price {
         font-size: 11px;
@@ -877,9 +904,9 @@ span.price {
         height: 1100px;
     }
 }
-
+/*mobil*/
 @media(max-width:360px) {
-    #cart img {
+    .cart img {
         width: 20px;
     }
     
@@ -918,12 +945,12 @@ span.price {
     font-weight: 600;
 }
 
-#navbar-right li #kundvagnknapp a:last-child {
+#navbar-right li .kundvagnknapp a:last-child {
     color: #ffffff;
     text-decoration: none;
 }
 
-#kundvagnknapp {
+.kundvagnknapp {
     margin-top: 3px;
 }
 
@@ -948,7 +975,6 @@ footer{
 footer ul{
   list-style: none;
   text-align: center;
-  vertical-align: center;
   padding: 0px;
   margin: 90px 0px 10px 0px;
 }
@@ -1061,10 +1087,10 @@ footer {
 }
     
 .navbar-default .navbar-toggle {
-        border: none;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 10px;
-    }
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
     
     
 .navbar-header {
@@ -1072,20 +1098,20 @@ footer {
     border: none;
 }
 
-    #kundvagnknapp {
-        height: 35px;
-        margin-top: 5px;
-        padding: 0;
-        padding-top: 7px;
-        width: 50px;
-        overflow: hidden;
-    }
-    
-    #kundvagnknapp li {
-        margin-top: -5px;
-    }
+.kundvagnknapp {
+    height: 35px;
+    margin-top: 5px;
+    padding: 0;
+    padding-top: 7px;
+    width: 50px;
+    overflow: hidden;
+}
 
-#kundvagnknapp li a {
+.kundvagnknapp li {
+    margin-top: -5px;
+}
+
+.kundvagnknapp li a {
     color: #ffffff;
 
 }
@@ -1150,16 +1176,20 @@ background-color: #DDCDB3;
 
 @media(min-width: 480px) and (max-width: 1000px) {
 
-     #navbar-right li a {
-    margin-right: -15px;
+ #navbar-right li a {
+margin-right: -15px;
+}
+
+.kundvagnknapp {
+    margin-left: 10px;
 }
     
 .vit{
   margin-left: 10px;
 }
     
-    .glyphicon-shopping-cart {
-    margin-left: -15px;
+.glyphicon-shopping-cart {
+margin-left: -15px;
 }
 }
 
@@ -1173,7 +1203,6 @@ background-color: #DDCDB3;
 #bottomnav{
   width: 100%;
   text-align: left; 
-  background-color: yellow;
 
 }
 
@@ -1206,10 +1235,10 @@ background-color: #DDCDB3;
 }
     
 .navbar-default .navbar-toggle {
-        border: none;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 10px;
-    }
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
     
     
 .navbar-header {
@@ -1217,18 +1246,18 @@ background-color: #DDCDB3;
     border: none;
 }
 
-    #kundvagnknapp {
-        height: 35px;
-        margin-top: 5px;
-        padding: 0;
-        padding-top: 7px;
-    }
+.kundvagnknapp {
+    height: 35px;
+    margin-top: 5px;
+    padding: 0;
+    padding-top: 7px;
+}
     
-    #kundvagnknapp li {
-        margin-top: -5px;
-    }
+.kundvagnknapp li {
+    margin-top: -5px;
+}
 
-#kundvagnknapp li a {
+.kundvagnknapp li a {
     color: #ffffff;
 
 }
@@ -1287,6 +1316,10 @@ background-color: #DDCDB3;
 #kvagn-lokal{
   display: none;
 }
+    
+#navbar-right {
+    width: 100%;
+}
 
 }
 
@@ -1317,7 +1350,6 @@ footer ul li{
 /**/
 #topnav li{
   height: 50px;
-  line-height;
   position: relative;
 }
 
@@ -1327,7 +1359,7 @@ footer ul li{
 }
 
 /**/
-#kundvagnknapp{
+.kundvagnknapp{
   top: 50%;
   margin-bottom: -25px;
 }
@@ -1340,7 +1372,7 @@ footer ul li{
 }
     
 #bottomnav li {
-        float: none;
+    float: none;
     display: inline-block;
     margin-right: 50px;
 }

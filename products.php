@@ -51,10 +51,10 @@ if($res->num_rows > 0) {
 			<div class="product col-md-3">
 				<div class="crop"><img class="productimg" src="{$row->imgUrl}" alt="product"></div>
 				<div class="titlewrap"><h4>$productTitle</h4></div>
-				<h6>LAGERSTATUS<div class="{$row->Lagerstatus} img-circle"></div></h6>
+				<div class="{$row->Lagerstatus} img-circle"></div><h6>LAGERSTATUS</h6>
 				<p class="price">{$row->Pris}kr</p>
 				<a class="btn btn-success pull-left" href="productdetails.php?id={$row->ProduktID}">LÄS MER</a>
-				<a class="btn btn-success pull-right" href="products.php?category={$row->Kategori}&id={$row->ProduktID}">KÖP</a>
+				<a class="btn btn-success pull-right" href="products.php?category={$row->Kategori}&amp;id={$row->ProduktID}">KÖP</a>
 			</div>
 END;
 	}

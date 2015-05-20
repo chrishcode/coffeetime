@@ -8,7 +8,6 @@ $img = <<<END
 	<div id="screenimg">
 	<div id="overlay"></div>
 	<div class="row col-md-2 col-centered">
-	<h1 class="slideh1"></h1>
 	</div>
 	<img class="screenimg" src="img/villkor2.jpg" alt="omossbild">
 	
@@ -39,7 +38,7 @@ $content = <<<END
 
 					<br><h4 class="col-md-7 col-centered"> Personuppgifter </h4>
 			<p class="col-md-7 col-centered">Vi följer Personuppgiftslagen (PuL), det innebär att vi är skyldiga att skydda dina personuppgifter och inte ge ut dem till tredjepart.</p>
-		</p> <br> <br>
+		 <br> <br>
 	</div>
 END;
 

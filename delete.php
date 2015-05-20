@@ -1,5 +1,6 @@
 <?php
 include('template.php');
+//raderar användare
 if(isset($_GET['KundID']))
 {
 	$query = <<<END

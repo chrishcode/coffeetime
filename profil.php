@@ -42,7 +42,7 @@ END;
                         <label>ADRESS</label><input class="form-control" type="text" name="Adress" value="{$row->Adress}"><br>
                         <label>POSTNUMMER</label><input class="form-control" type="text" name="Postnummer" value="{$row->Postnummer}"><br>
                         <input class="btn btn-success" type="submit" value="UPPDATERA">
-                        <a class="btn btn btn-danger btn-delete" type="submit" href="delete.php?KundID={$row->KundID}" onclick="return confirm('Är du säker på att du vill radera ditt konto?')">
+                        <a class="btn btn btn-danger btn-delete" href="delete.php?KundID={$row->KundID}" onclick="return confirm('Är du säker på att du vill radera ditt konto?')">
                         RADERA</a>
                     </form>
                 </div>
@@ -91,8 +91,9 @@ END;
 END;
                 }}
                 $order .= <<<END
-                    <table id="cart" class="cart-historik">
-                    <h4>Beställning - $datum</h4>
+                <h4>Beställning - $datum</h4>
+                    <table class="cart cart-historik">
+                    
                         <tr>   
                             <th class="productname">PRODUKT</th>
                             <th>ANTAL</th>
@@ -113,7 +114,7 @@ END;
             $order
 END;
         $orderHistorik = <<<END
-            <div id="content" class="container">
+            <div id="contentorderhistorik" class="container">
                 <div id="orderhistorik" class="col-md-7 col-centered">
                     <h3>Orderhistorik</h3>
                     $orders

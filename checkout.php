@@ -20,7 +20,7 @@ if(isset($_SESSION['KundID'])) {
         $cartProducts .= <<<END
             <tr>
                 <td><img src="$img" alt="produktbild"></td>
-                <td class="productname"><h4>$produktNamn<h4></td>
+                <td class="productname"><p>$produktNamn</p></td>
                 <td>$antal</td>
                 <td class="price">$pris kr</td>
                 <td><a class="glyphicon glyphicon-trash" href="cartdelete.php?id=$cartId"></a></td>
@@ -30,7 +30,7 @@ END;
 
     //kundvagnen
     $cart = <<<END
-            <table id="cart">
+            <table class="cart">
                 <tr>
                     <th></th>
                     <th class="productname">PRODUKT</th>
@@ -91,7 +91,7 @@ END;
                 $row = $res->fetch_object();
             //content
             $content .= <<<END
-                <div id="content" class="container">
+                <div id="contentcheckout" class="container">
                     <form class="col-md-7 col-centered" method="post" action="profil.php?KundID={$row->KundID}">
                         <h3>Leveransadress</h3>
                         <label>FÖRNAMN</label><input class="form-control" type="text" name="Fnamn" value="{$row->Fnamn}"><br>
@@ -111,11 +111,10 @@ END;
     
     //visar fraktsätt
     $content .= <<<END
-        <div id="content" class="container">
+        <div id="fraksatt" class="container">
             <div class="col-md-7 col-centered">
                 <h3>Fraktsätt</h3>
-                <input type="radio" class="form-control frakt" checked><label class="frakt-label">Postpaket</label> Fraktkostnad: 0kr!
-                <p>Leverans sker till Postens uthämtningsställe. Medtag giltig legitimation på beställaren vid avhämtning. Normal leveranstid: nästkommande vardag.</p>
+                <input type="radio" class="form-control frakt" checked><label class="frakt-label">Postpaket</label> Fraktkostnad: 0kr!<p>Leverans sker till Postens uthämtningsställe. Medtag giltig legitimation på beställaren vid avhämtning. Normal leveranstid: nästkommande vardag.</p>
             </div>
         </div>
 END;
@@ -123,7 +122,7 @@ END;
     
     //visar betalsätt
     $content .= <<<END
-        <div id="content" class="container">
+        <div id="betalsatt" class="container">
             <div class="col-md-7 col-centered" id="betala">
                 <h3>Betalsätt</h3>
                 <input type="radio" class="form-control frakt" checked><label class="frakt-label"><img class="kassa-paypal" src="img/paypalen.png" alt="paypal"></label>

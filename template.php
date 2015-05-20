@@ -4,8 +4,6 @@ session_name('CoffeeTime');
 session_start();
  ?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,15 +14,14 @@ session_start();
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
-</head>
-<body>
-	<script src="js/responsiveslides.min.js"></script>
+	<title>Coffeetime</title>
+    <script src="js/responsiveslides.min.js"></script>
 	<script src="js/slider.js"></script>
-</body>
-</html>
+
+
 <?php
 
-
+error_reporting(E_ERROR | E_PARSE);
 //databas connect
 $servername = "localhost";
 $username = "root";
@@ -94,7 +91,7 @@ $header = <<<END
 		</button>
 
 
-		<li class="pull-right" id="kvagn-global"><a href="cart.php"><div class="btn btn-default" id="kundvagnknapp"><div class="glyphicon glyphicon-shopping-cart"></div>KUNDVAGN ($cartQty)</div></li></a>
+		<div class="pull-right" id="kvagn-global"><a href="cart.php"><div class="btn btn-default kundvagnknapp"></div><div class="glyphicon glyphicon-shopping-cart"></div>KUNDVAGN ($cartQty)</a></div>
 
 		<a class="navbar-brand" href="index.php"><p class="pull-left">
 		<img src="img/logo.svg" alt="logo">Coffeetime</p></a>
@@ -103,13 +100,13 @@ $header = <<<END
 
 		<div class="navbar-collapse collapse">
 
-			<ul id="navbar-right" class="nav navbar-nav navbar-right" >
+			<ul id="navbar-right" class="nav navbar-nav navbar-right">
 
 				<li><a href="omoss.php">OM OSS</a></li>
 				<li><a href="kontakt.php">KONTAKT</a></li>
 				<li><a href="logout.php">LOGGA UT</a></li>
 				<li><a href="profil.php?KundID={$_SESSION['KundID']}">INLOGGAD SOM {$_SESSION['Email']}</a></li>
-				<li class="pull-right" id="kvagn-lokal"><div class="btn btn-default" id="kundvagnknapp"><div class="glyphicon glyphicon-shopping-cart"><a href="cart.php" class="vit"></div>KUNDVAGN ($cartQty)</a></li>
+				<li class="pull-right" id="kvagn-lokal"><div class="btn btn-default kundvagnknapp"><div class="glyphicon glyphicon-shopping-cart"></div><a href="cart.php" class="vit">KUNDVAGN ($cartQty)</a></div>
 
 			</ul>
 
@@ -176,7 +173,7 @@ $header = <<<END
 		</button>
 
 
-		<li class="pull-right" id="kvagn-global"><a href="cart.php"><div class="btn btn-default" id="kundvagnknapp"><div class="glyphicon glyphicon-shopping-cart"></div>KUNDVAGN ($cartQty)</div></li></a>
+		<div class="pull-right" id="kvagn-global"><a href="cart.php"><div class="btn btn-default kundvagnknapp"></div><div class="glyphicon glyphicon-shopping-cart"></div>KUNDVAGN ($cartQty)</a></div>
 
 		<a class="navbar-brand" href="index.php"><p class="pull-left">
 		<img src="img/logo.svg" alt="logo">Coffeetime</p></a>
@@ -191,7 +188,7 @@ $header = <<<END
 				<li><a href="kontakt.php">KONTAKT</a></li>
 				<li><a href="login.php">LOGGA IN</a></li>
 				<li><a href="login.php">BLI MEDLEM</a></li>
-				<li class="pull-right" id="kvagn-lokal"><div class="btn btn-default" id="kundvagnknapp"><div class="glyphicon glyphicon-shopping-cart"><a href="cart.php" class="vit"></div>KUNDVAGN ($cartQty)</a></li>
+				<li class="pull-right" id="kvagn-lokal"><div class="btn btn-default kundvagnknapp"><div class="glyphicon glyphicon-shopping-cart"></div><a href="cart.php" class="vit">KUNDVAGN ($cartQty)</a></div>
 
 			</ul>
 
@@ -267,7 +264,7 @@ $footer = <<<END
 
 		<div class="row">
 				<div class="col-md-2 col-centered">
-					<p>&copy coffeetime.se</p>
+					<p>&copy; coffeetime.se</p>
 				</div>	
 			</div><!-- end row -->
 

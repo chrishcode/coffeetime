@@ -27,9 +27,9 @@ if($res->num_rows > 0) {
 				<div class="detailinfo">
 					<h4 class="detailtitle pull-left">$productTitle</h4>
 					<p class="detaildesc">$productDesc</p>
-					<h6 class="detailstatus">LAGERSTATUS<div class="detail{$row->Lagerstatus} img-circle"></div></h6>
+					<div class="detail{$row->Lagerstatus} img-circle"></div><h6 class="detailstatus">LAGERSTATUS</h6>
 					<p class="detailprice">{$row->Pris}kr</p>
-					<a class="btn btn-success detailbtn" href="products.php?category={$row->Kategori}&id={$row->ProduktID}">KÖP</a>
+					<a class="btn btn-success detailbtn" href="products.php?category={$row->Kategori}&amp;id={$row->ProduktID}">KÖP</a>
 				</div>
 			</div>
 END;
@@ -43,7 +43,7 @@ $title = strtoupper($_GET["category"]);
 $content = <<<END
 	<div id="content" class="container">
 		<div id="products" class="col-md-10 col-centered">
-			<h1 class="col-md-4 col-centered">$title</h1>
+			<p class="col-md-4 col-centered">$title</p>
 			$product
 		</div>
 	</div>
